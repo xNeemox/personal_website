@@ -1,0 +1,788 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+h2{
+    padding-bottom: 10px;
+}
+
+body.homepage {
+    min-height: 100vh;
+    background: linear-gradient(
+        to top,
+        rgb(199, 113, 28),
+        rgb(245, 222, 187)
+    );
+    font-family: Arial;
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.393);
+    color: white;
+}
+
+.footer-container{
+    height: 150px;
+    margin: 30px 50px 0 250px;
+    padding: 40px 60px;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    justify-content: space-around;
+}
+
+.menu-content,
+.services-content,
+.contact-us-content{
+    display: block;
+    padding-bottom: 10px;
+}
+
+.menu-content:hover,
+.services-content:hover,
+.contact-us-content:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+body.about-me{
+    min-height: 100vh;
+    background: linear-gradient(
+        to top,
+        rgb(46, 124, 158),
+        white
+    );
+    font-family: Arial;
+} 
+
+
+body.homepage .profile-holder{
+    background-color: rgb(198, 140, 30);
+    position: fixed;
+    top: 0;
+    width: 200px;
+    height: 200px;
+}
+
+body.homepage .my-profile{
+    border-radius: 90px;
+    box-shadow: 1px 6px 25px -1px #f3f5f1;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 190px;
+    height: 140px
+}
+
+body.homepage .sidebar{
+    background: linear-gradient(
+        to bottom,
+        rgb(198, 140, 30),
+        rgb(100, 70, 20)
+    );
+    position: fixed;
+    width: 200px;
+    bottom: 0;
+    top: 200px;
+    z-index: 100;
+}
+
+body.homepage .navigation p{
+    color:white;
+}
+
+body.about-me .profile-holder{
+    background-color: rgb(56, 196, 243);
+    position: fixed;
+    top: 0;
+    width: 200px;
+    height: 200px;
+}
+
+
+body.about-me .my-profile{
+    border-radius: 90px;
+    box-shadow: 1px 6px 25px -1px #000000;
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 190px;
+    height: 140px
+}
+
+
+body.about-me .sidebar{
+    background: linear-gradient(
+        rgb(56, 196, 243),
+        rgb(32, 32, 32)
+    );
+    position: fixed;
+    width: 200px;
+    bottom: 0;
+    top: 200px;
+    z-index: 100;
+}
+
+body.about-me .navigation p{
+    color:white;
+}
+
+.navigation{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+    width: 200px;
+    height: 100px;
+}
+
+.navigation p:hover{
+    text-decoration: underline;
+}
+
+#home, #about, #skills, #contacts{
+    cursor: pointer;
+}
+
+body.homepage .image-container{
+    display: grid;
+    position: relative;
+    grid-template-columns: 500px 500px;
+    margin-left: 220px;
+    margin-top: 50px;
+}
+
+body.about-me .image-container{
+    width: 900px;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 290px;
+}
+
+body.homepage .home-image{
+    border-radius: 0px 120px 0px 120px;
+    width: 500px;
+}
+
+body.about-me .home-image{
+    border-radius: 0px 120px 0px 120px;
+    width: 100%;
+}
+
+body.homepage .text-container{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+body.homepage .pogi-container{
+    position: relative;
+}
+
+body.homepage .message-1{
+    background-color: rgba(0, 0, 0, 0.283);
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+    width: fit-content;
+    margin-top: 70px;
+    margin-left: 30px;
+    width: 300px;
+    height: 120px;
+}
+
+
+body.homepage .quote{
+    background-color: rgba(0, 0, 0, 0.283);
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+    margin-left: 60px;
+    width: 200px;
+    height: 120px;
+}
+
+body.about-me .message-2{
+    background-color: rgba(0, 0, 0, 0.384);
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+    position: absolute;
+    top: 100px;
+    left: 60px;
+    width: 300px;
+}
+
+
+.popupBtn{
+    background-color: #d98837;
+    border-radius: 10px;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 100px;
+    right: 380px;
+    z-index: 100;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index:101;
+}
+
+.popup-content {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    margin: 15% auto;
+    border-radius: 10px;
+    position: relative;
+    z-index: 102;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+body.about-me #click-me{
+    background-color: rgb(19, 250, 19);
+    border-radius: 10px 10px 10px 0;
+    border-width: 0;
+    color: rgb(18, 18, 18);
+    padding: 5px;
+    position: absolute;
+    bottom: 190px;
+    right: 350px;
+    width: 70px;
+    z-index: 100;
+}
+
+body.about-me #click-me:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+body.more{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+
+    background: #f2f2f2;
+}
+
+body.more .container-1{
+    align-items: center;
+     background: linear-gradient(
+        to bottom right,
+        rgba(0, 0, 0, 0.772),
+        rgb(128, 118, 118)
+    );
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+body.more .subpart{
+    display: grid;
+    grid-template-columns: 500px 500px;
+    height: 500px;
+    margin-bottom: 50px;
+}
+
+body.more .image-content{
+    position: relative;
+    background: linear-gradient(
+        to left top,
+        rgb(58, 47, 202),
+        white
+    );
+    box-shadow: 10px 10px 25px rgba(17, 0, 255, 0.5);
+}
+
+body.more .subtitle{
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 6px 10px;
+    color: white
+}
+
+body.more #subtitle-1{
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    font-size: 25px;
+}
+
+body.more .images{
+    border-radius: 20px;
+    width: 240px;
+}
+
+body.more #valorant{
+    position: absolute;
+    top: 150px;
+    right:30px;
+    transform: rotate(15deg);
+}
+body.more #csgo{
+    position: absolute;
+    width: 160px;
+    bottom: 50px;
+    left:230px;
+    z-index: 2;
+    transform: rotate(15deg);
+}
+body.more #league{
+    position: absolute;
+    top: 100px;
+    left:50px;
+    transform: rotate(-15deg);
+}
+body.more #zelda{
+    position: absolute;
+    width: 260px;
+    top: 260px;
+    left:50px;
+    transform: rotate(-15deg);
+    z-index: 1;
+}
+
+body.more #basketball{
+    position: absolute;
+    width: 250px;
+    top: 80px;
+    left:30px;
+    z-index: 1;
+}
+
+body.more #volleyball{
+    position: absolute;
+    width: 300px;
+    bottom: 40px;
+    right: 20px;
+    z-index: 1;
+}
+
+body.more #programming{
+    position: absolute;
+    width: 250px;
+    top: 80px;
+    left:30px;
+    z-index: 1;
+}
+
+body.more #music{
+    position: absolute;
+    width: 200px;
+    bottom: 60px;
+    right: 10px;
+    z-index: 1;
+}
+
+body.more #switzerland{
+    position: absolute;
+    width: 260px;
+    top: 110px;
+    left: 0;
+    z-index: 1;
+}
+
+body.more #skydive{
+    position: absolute;
+    width: 240px;
+    top: 70px;
+    right:0;
+    z-index: 1;
+}
+
+body.more #travel{
+    position: absolute;
+    width: 230px;
+    bottom: 40px;
+    right: 5px;
+    z-index: 1;
+}
+
+body.more .text-content{
+     background: linear-gradient(
+        to right top,
+        rgb(221, 0, 255),
+        white
+    );
+    box-shadow: 10px 10px 25px rgba(221, 0, 255, 0.5);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: 1;
+}
+
+article{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;;
+    color: white;
+    font-size: 20px;
+    margin-top: 50px;
+    padding: 15px;
+    width: fit-content;
+    max-width: 300px;
+    text-align: center;
+}
+
+/*
+    Tablet
+*/
+
+@media (max-width: 768px){
+
+    body.homepage .image-container{
+        grid-template-columns: 180px 300px;
+        margin-left: 200px;
+    }
+
+    body.homepage .pogi-container{
+        position: relative;
+    }
+    body.homepage .home-image{
+        border-radius: 0 30px 0 30px;
+        width: 300px;;
+    }
+
+    body.homepage .message-1{
+        margin-top: 0;
+        margin-bottom: 10px;
+        width: fit-content;
+        font-size: 12px;
+    }
+    
+    body.homepage .quote{
+        margin-left: 20px;
+        width: fit-content;
+        font-size: 12px;
+    }
+
+    body.homepage .popupBtn{
+        font-size: 12px;
+        top: 50px;
+        right: 180px;
+        position: absolute;
+
+    }
+
+    /*
+        about-me
+    */
+
+
+    body.about-me .image-container{
+        width: 520px;
+        margin-left: 215px;
+        margin-top: 100px;
+    }
+
+    body.about-me .home-image{
+        border-radius: 0 30px 0 30px;
+    }
+
+    body.about-me .message-2{
+        font-size: 16px;
+        left: 0;
+        top: 40px;
+    }
+
+    body.about-me #click-me{
+        height: 25px;
+        font-size: 14px;
+        bottom: 120px;
+        right: 170px;
+    }
+
+    /*
+        more...    
+    */
+
+    body.more .subpart{
+        grid-template-columns: 350px 350px;
+        height: 350px;
+    }
+
+    body.more #subtitle-1{
+        font-size: 16px;
+        left: 140px;
+    }
+
+    body.more .images{
+        width: 150px;
+    }
+
+    body.more #league{
+        top: 70px;
+        left: 30px;
+    }
+
+    body.more #valorant{
+        top: 100px;
+    }
+
+    body.more #csgo{
+        width: 110px;
+        left: 150px;
+        top: 190px;
+    }
+
+    body.more #zelda{
+        width: 160px;
+        left: 30px;
+        top: 170px
+    }
+
+    body.more #basketball{
+        width: 170px;
+        top: 70px;
+        left: 30px;
+    }
+
+    body.more #volleyball{
+        width: 200px;
+        left: 120px;
+        bottom: 20px;
+    }
+
+    body.more #music{
+        width: 150px;
+        top: 60px;
+        right: 20px;
+    }
+
+    body.more #programming{
+        width: 160px;
+        left: 10px;
+    }
+
+    body.more #travel{
+        width: 150px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    body.more #switzerland{
+        width: 170px;
+        left: 10px;
+        top: 70px;
+    }
+
+    body.more #skydive{
+        width: 160px;
+        top: 70px;
+        right: 10px;
+    }
+
+    body.more article{
+        font-size: 16px;
+    } 
+}
+
+
+/*
+    Mobile
+*/
+
+@media (max-width: 500px){
+
+    body.homepage .profile-holder{
+        width: 150px;
+    }
+
+    body.homepage .my-profile{
+        width: 140px;
+        height: 100px;
+    }
+
+    body.homepage .sidebar{
+        width: 150px;
+    }  
+
+    body.homepage .navigation{
+        padding: 0;
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    body.homepage .image-container{
+        grid-template-columns: 100px 200px;
+        margin-top: 80px;
+        margin-left: 160px;
+    }
+
+    body.homapage .pogi-container{
+        position: relative;
+    }
+
+    body.homepage .home-image{
+        border-radius: 0 30px 0 30px;
+        width: 200px;
+    }
+
+    body.homepage .message-1{
+        margin: 0;
+        width: 80px;
+        font-size: 10px;
+    }
+    
+    body.homepage .quote{
+        margin-left: 0;
+        width: 70px;
+        font-size: 10px;
+    }
+
+    body.homepage .popupBtn{
+        font-size: 10px;
+        top: 50px;
+        right: 140px;
+        position: absolute;
+    }
+
+    /*
+        about-me
+    */
+
+    body.about-me .profile-holder{
+        width: 150px;
+    }
+
+    body.about-me .my-profile{
+        width: 140px;
+        height: 100px;
+    }
+
+    body.about-me .sidebar{
+        width: 150px;
+    }  
+
+    body.about-me .navigation{
+        padding: 0;
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    body.about-me .image-container{
+        width: 340px;
+        margin-left: 150px;
+    }
+
+    body.about-me .home-image{
+        border-radius: 0 30px 0 30px;
+    }
+
+    body.about-me .message-2{
+        font-size: 10px;
+        left: 0;
+        top: 40px;
+    }
+
+    body.about-me #click-me{
+        height: 20px;
+        font-size: 10px;
+        top: 100px;
+        right: 80px;
+    }
+
+    /*
+        more...    
+    */
+
+    body.more .subpart{
+        grid-template-columns: 250px 250px;
+        height: 300px;
+    }
+
+    body.more #subtitle-1{
+        font-size: 12px;
+        left: 100px;
+    }
+
+    body.more .images{
+        width: 120px;
+    }
+
+    body.more #league{
+        top: 60px;
+        left: 30px;
+    }
+
+    body.more #valorant{
+        top: 100px;
+    }
+
+    body.more #csgo{
+        width: 90px;
+        left: 100px;
+        top: 180px;
+    }
+
+    body.more #zelda{
+        width: 120px;
+        left: 30px;
+        top: 150px
+    }
+
+    body.more #basketball{
+        width: 130px;
+        top: 50px;
+        left: 30px;
+    }
+
+    body.more #volleyball{
+        width: 150px;
+        left: 80px;
+    }
+
+    body.more #music{
+        width: 100px;
+        left: 140px;
+    }
+
+    body.more #programming{
+        width: 110px;
+        left: 20px;
+    }
+
+    body.more #travel{
+        width: 110px;
+        left: 130px;
+        top: 150px;
+    }
+
+    body.more #switzerland{
+        width: 120px;
+        left: 10px;
+        top: 70px;
+    }
+
+    body.more #skydive{
+        width: 110px;
+        top: 70px;
+        left: 130px;
+    }
+
+    body.more article{
+        font-size: 12px;
+    } 
+}
+
